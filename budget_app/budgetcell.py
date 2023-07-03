@@ -10,8 +10,8 @@ from bs4 import BeautifulSoup
 
 print("Seja bem vindo ao BudgetCell!")
 # fazer login
-login=input("Login: ")
-senha=input("Senha: ")
+login=input("Login:")
+senha=input("Senha:")
 loop= "s"
 while loop == "s":
 
