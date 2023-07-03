@@ -1,3 +1,5 @@
+#versao2.0
+
 import re
 import csv
 import numpy as np
@@ -5,7 +7,6 @@ import pandas as pd
 import requests
 import httpx
 from bs4 import BeautifulSoup
-import time
 
 print("Seja bem vindo ao BudgetCell!")
 # fazer login
@@ -68,4 +69,3 @@ while loop == "s":
 
     loop=input("Gostaria de fazer outro orçamento?\n")
 
-time.sleep(10)
