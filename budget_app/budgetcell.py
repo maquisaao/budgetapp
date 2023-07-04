@@ -7,6 +7,7 @@ import pandas as pd
 import requests
 import httpx
 from bs4 import BeautifulSoup
+import time
 
 print("Seja bem vindo ao BudgetCell!")
 # fazer login
@@ -46,7 +47,7 @@ while loop == "s":
         # usar a classe price e retornar os valores iniciados com R$
         resultado = BeautifulSoup(busca.text, "html.parser")
         produtos = resultado.find_all("div", "product-list")
-        for produto in produtos[:3]:  # Retorna os três primeiros produtos
+        for produto in produtos[:5]:  # Retorna os três primeiros produtos
             # h4 é a div que está o texto do item
             nome = produto.find("h4").text.strip()
             # price é a classe de onde ta o preço
@@ -67,5 +68,7 @@ while loop == "s":
     print(f"O valor a ser cobrado é de R$ {valor_final_cartao:.2f} se for no cartao.")
     print(f"O valor a ser cobrado é de R$ {valor_final_pix:.2f} se for no pix ou dinheiro.")
 
-    loop=input("Gostaria de fazer outro orçamento?\n")
+    loop=input("Gostaria de fazer outro orçamento? Sim [s] | Nao [n]\n")
 
+print("App fechando..")
+time.sleep(5)
